@@ -17,11 +17,11 @@ export default function SearchBar() {
     const [selected, setSelected] = useState(people[0])
 
     return (
-        <div className="w-3/4 h-40 flex justify-around mx-auto my-8 shadow-lg">
-            <div className="w-72">
+        <div className="w-auto m-auto md:w-3/4 md:h-40 flex justify-around items-center my-8 py-6 rounded-lg">
+            <div className="w-1/5 hidden md:block">
                 <Listbox value={selected} onChange={setSelected}>
-                    <div className="relative mt-6">
-                        <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                    <div className="relative ">
+                        <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white shadow py-2 pl-3 pr-10 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                             <span className="block truncate">{selected.name}</span>
                             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                                 <FontAwesomeIcon icon={faChevronDown} />
@@ -65,11 +65,10 @@ export default function SearchBar() {
                     </div>
                 </Listbox>
             </div>
-
-            <div className="w-72">
+            <div className="w-1/5 hidden md:block">
                 <Listbox value={selected} onChange={setSelected}>
-                    <div className="relative mt-6">
-                        <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                    <div className="relative ">
+                        <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white shadow py-2 pl-3 pr-10 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                             <span className="block truncate">{selected.name}</span>
                             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                                 <FontAwesomeIcon icon={faChevronDown} />
@@ -113,11 +112,10 @@ export default function SearchBar() {
                     </div>
                 </Listbox>
             </div>
-
-            <div className="w-72">
+            <div className="w-1/5 hidden md:block">
                 <Listbox value={selected} onChange={setSelected}>
-                    <div className="relative mt-6">
-                        <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                    <div className="relative ">
+                        <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white shadow py-2 pl-3 pr-10 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                             <span className="block truncate">{selected.name}</span>
                             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                                 <FontAwesomeIcon icon={faChevronDown} />
@@ -160,9 +158,9 @@ export default function SearchBar() {
                         </Transition>
                     </div>
                 </Listbox>
-            </div>     
-            <div className="w-72">
-                <input type="text" placeholder='Search' className='border border-gray-light mt-6 px-4 py-1 rounded'/>
+            </div>
+            <div className="w-1/5">
+                <input type="text" placeholder='Search' className='border border-gray-light px-4 py-1 rounded shadow' />
             </div>
         </div>
 

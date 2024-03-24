@@ -6,7 +6,7 @@ import { Header } from "@/containers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "HomeRent App",
+  title: "Nguyen Thi Dieu Hang",
   description: "Create by Hang",
 };
 

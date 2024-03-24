@@ -12,7 +12,7 @@ import { faArrowLeftLong, faArrowRightLong } from "@fortawesome/free-solid-svg-i
 
 export default function Home() {
   return (
-    <div className="md:pt-2 px:2 lg:pt-6 xl:pt-10">
+    <div className="md:pt-2 px:2 lg:pt-6 xl:pt-10 px-4 sm:p-0">
       {/* top background */}
       <div className="w-full h-full py-14 md:flex lg:flex xl:flex">
         <div className="md:w-1/2 lg:w-1/2 xl:w-1/2 flex items-center md:justify-center lg:justify-end  xl:justify-end pr-20">
@@ -42,7 +42,7 @@ export default function Home() {
 
       {/* center item */}
       <div className="md:flex lg:flex xl:flex sm:p-10">
-        <div className="lg:w-1/2 xl:w-1/2 flex justify-end items-top py-24 pr-20 h-1/2">
+        <div className="lg:w-1/2 flex justify-end items-top md:py-24 md:pr-20 h-1/2">
           <Image src={home2Pic} className="shadow-2xl rounded-md p-2" alt="HOME_PIC" />
         </div>
 
@@ -51,7 +51,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold py-2">The Leading Real Estate Rental Marketplace.</h2>
           <p className="py-6 mb-4 text-gray">Houzez allow you to design unlimited panels and real estate custom forms to capture leads and keep record of all information</p>
 
-          <div className="flex md:flex-col lg:flex-row my-0.5 text-gray">
+          <div className="flex flex-col lg:flex-row my-0.5 text-gray">
             <div className="p-2 w-64 flex items-center ">
               <div className="w-12 h-12 rounded-full p-3 bg-primaryContainer mr-2"><Image src={icon1} alt="HOME_ICON"></Image></div>
               <p>Smart Home Design</p>
@@ -61,7 +61,7 @@ export default function Home() {
               <p>Smart Home Design</p>
             </div>
           </div>
-          <div className="flex md:flex-col lg:flex-row my-0.5 text-gray">
+          <div className="flex flex-col lg:flex-row my-0.5 text-gray">
             <div className="p-2 w-64 flex items-center">
               <div className="w-12 h-12 rounded-full p-3 bg-primaryContainer mr-2"><Image src={icon1} alt="HOME_ICON"></Image></div>
               <p>Smart Home Design</p>
@@ -83,12 +83,12 @@ export default function Home() {
       </div>
 
       <div className="w-auto h-screen">
-        <div className="w-auto relative h-3/4 px-80 text-gray-dark">
-          <Image src={background2} alt="BACKGROUND_SLIDE" className="absolute inset-0 z-0 w-full h-4/5 object-cover"></Image>
+        <div className="w-auto relative h-3/4 sm:px-80 text-gray-dark">
+          <Image src={background2} alt="BACKGROUND_SLIDE" className="hidden md:block absolute inset-0 z-0 w-full h-4/5 object-cover"></Image>
           <div className="m-auto z-10 relative pt-10">
-            <p className="text-white">Upcoming Projects</p>
+            <p className="md:text-white">Upcoming Projects</p>
             <div className="flex justify-between my-3">
-              <h1 className="text-4xl font-bold w-1/2 text-white">Dream Living Space Setting New Standards</h1>
+              <h1 className="text-4xl font-bold w-1/2 md:text-white">Dream Living Space Setting New Standards</h1>
               <div>
                 <button type="button" className="bg-primary inline-flex text-white items-center rounded-md p-5 mr-3 text-sm font-semibold shadow-sm border-white">
                   <FontAwesomeIcon icon={faArrowLeftLong} />
@@ -99,12 +99,12 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-10 flex shadow-lg rounded-md">
-              <div className="w-3/5">
+            <div className="bg-white md:p-10 md:flex shadow-lg rounded-md">
+              <div className="md:w-3/5">
                 <Image src={homePic} alt="HOME_PIC">
                 </Image>
               </div>
-              <div className="w-2/5 ml-5 p-10 bg-gray-light">
+              <div className="md:w-2/5 md:ml-5 p-4 md:p-10 bg-gray-light">
                 <p className="text-primary">About Projects</p>
                 <h1 className="text-3xl font-bold">Upcomming Projects</h1>
                 <div className="flex justify-between my-3">
@@ -124,7 +124,7 @@ export default function Home() {
                   <p>500$</p>
                 </div>
                 <div className="flex justify-between my-3">
-                  <p>4. Price: </p>
+                  <p>5. Price: </p>
                   <p>500$</p>
                 </div>
                 <button type="button" className="bg-primary text-white inline-flex items-center rounded-md px-12 mr-3 mt-10 py-4 text-sm font-semibold shadow-sm hover:bg-white border border-white hover:text-black hover:border-primaryContainer">
@@ -136,10 +136,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-auto m-auto bg-gray-light px-80 py-10">
-        <p className="text-primary my-4">Area Properties</p>
-        <h2 className="text-4xl font-bold w-1/3">Find Your Dream House Search By Area</h2>
-        <div className="flex justify-left mt-16 mb-20">
+      <div className="w-auto mt-80 md:mt-auto ">
+        <div className="lg:px-80">
+          <p className="text-primary my-4">Area Properties</p>
+          <h2 className="text-md md:text-4xl font-bold md:w-1/3">Find Your Dream House Search By Area</h2>
+        </div>
+
+        <div className="flex justify-center mt-16 mb-20">
           {
             listHome.map((item, index) => (
               <a key={index} href="#">
